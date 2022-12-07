@@ -20,13 +20,14 @@ print(x)
 app = Flask(__name__)    
 app.static_folder = 'static'
 
+
 @app.route('/')
 def inicio():
     while True:
         x = sheet.acell("A1").value
         x = int(x)
         print(x)
-        
+            
         if x==1:
             print(0)
         else:
@@ -34,6 +35,11 @@ def inicio():
 
         return render_template("/index.html", x=x)
         time.sleep(3)
+
+  
+
+
+
 
 
 if __name__ == '__main__':
